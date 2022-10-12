@@ -8,7 +8,10 @@ impl Solution {
             // We track two maximum subarray sums
             // curr - the subarray ends on current index i
             // max - the subarray ends on any index before i (including)
-            curr = cmp::max(nums[i],curr + nums[i]);
+            curr = match curr < 0 {
+                true => nums[i],
+                _ => curr + nums[i]
+            };
             max = cmp::max(max, curr);
         }
         
