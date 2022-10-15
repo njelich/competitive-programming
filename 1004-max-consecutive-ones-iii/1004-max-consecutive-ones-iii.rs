@@ -4,7 +4,6 @@ impl Solution {
         let mut zeros = 0;
         let mut start = 0;
         let mut end = 0;
-        println!("{}", k);
         
         for i in nums.iter() {
             zeros += (1 - i); //if 0 add 1
