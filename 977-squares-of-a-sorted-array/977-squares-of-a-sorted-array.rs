@@ -1,10 +1,11 @@
 impl Solution {
     pub fn sorted_squares(nums: Vec<i32>) -> Vec<i32> {
-        if nums.len() < 2 {
+        let (mut l, mut r) = (0, nums.len() - 1);
+        if r == 0 {
             return vec![nums[0].pow(2)];
         }
-        let mut res: Vec<i32> = Vec::with_capacity(nums.len());
-        let (mut l, mut r) = (0, nums.len() - 1);
+        let mut res: Vec<i32> = Vec::with_capacity(r+1);
+        
         unsafe {
             res.set_len(r+1);
             while l != r {
