@@ -1,6 +1,6 @@
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-        let mut found = Vec::with_capacity(nums.len() / 3);
+        let mut found = Vec::new();
 
         if nums.len() < 3 {
             return found;
@@ -9,7 +9,6 @@ impl Solution {
         nums.sort();
 
         let (mut l, mut r, mut res) = (0, 0, 0);
-
         
         for i in 0..(nums.len() - 2) {
             l = i + 1;
