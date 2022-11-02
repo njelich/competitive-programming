@@ -15,6 +15,16 @@ impl Solution {
             r = nums.len() - 1;
             res = -nums[i];
             while r != l {
+                if l > i + 1 && nums[l] == nums[l - 1] {
+                    l += 1;
+                    continue;
+                }
+                if r < nums.len() - 1 && nums[r] == nums[r+1] {
+                    r -= 1;
+                    continue;
+                }
+
+                
                 if nums[r] + nums[l] > res {
                     r-=1;
                 } else if nums[r] + nums[l] < res {
