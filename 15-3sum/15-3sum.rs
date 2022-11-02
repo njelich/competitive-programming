@@ -26,7 +26,7 @@ impl Solution {
             }
         }
         
-        found.sort();
+        found.sort_unstable();
         found.dedup();
         found
     }
