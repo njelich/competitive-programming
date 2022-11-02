@@ -6,7 +6,7 @@ impl Solution {
             return found;
         }
 
-        nums.sort();
+        nums.sort_unstable();
 
         let (mut l, mut r, mut res) = (0, 0, 0);
         
