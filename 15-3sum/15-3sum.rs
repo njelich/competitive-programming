@@ -1,6 +1,6 @@
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-        let mut found = Vec::new();
+        let mut found = Vec::with_capacity(nums.len() / 3);
 
         if nums.len() < 3 {
             return found;
