@@ -13,9 +13,9 @@ impl Solution {
                 if((found - target).abs() > (nums[i] + nums[r] + nums[l] - target).abs()) {
                     found = nums[i] + nums[r] + nums[l];
                 }
-                if nums[i] + nums[r] + nums[l] - target > 0 {
+                if nums[i] + nums[r] + nums[l] > target {
                     r-=1;
-                } else if nums[i] + nums[r] + nums[l] - target < 0 {
+                } else if nums[i] + nums[r] + nums[l] < target {
                     l+=1;
                 } else {
                     return nums[i] + nums[r] + nums[l];
