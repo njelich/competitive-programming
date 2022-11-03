@@ -10,16 +10,15 @@ impl Solution {
             l = i + 1;
             r = nums.len() - 1;
             while r != l {
-                let sum = nums[i] + nums[r] + nums[l] - target;
-                if((found - target).abs() > (sum).abs()) {
-                    found = sum + target;
+                if((found - target).abs() > (nums[i] + nums[r] + nums[l] - target).abs()) {
+                    found = nums[i] + nums[r] + nums[l];
                 }
-                if sum > 0 {
+                if nums[i] + nums[r] + nums[l] - target > 0 {
                     r-=1;
-                } else if sum < 0 {
+                } else if nums[i] + nums[r] + nums[l] - target < 0 {
                     l+=1;
                 } else {
-                    return sum + target;
+                    return nums[i] + nums[r] + nums[l];
                 }
             }
         }
