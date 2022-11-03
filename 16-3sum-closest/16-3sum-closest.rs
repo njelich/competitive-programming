@@ -10,7 +10,7 @@ impl Solution {
             l = i + 1;
             r = nums.len() - 1;
             while r != l {
-                sum = nums[i] + nums[r] + nums[l] - target;
+                let sum = nums[i] + nums[r] + nums[l] - target;
                 if((found - target).abs() > (sum).abs()) {
                     found = sum + target;
                 }
