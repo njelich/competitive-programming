@@ -4,7 +4,7 @@ impl Solution {
         
         let mut found: i32 = nums[0] + nums[1] + nums[nums.len() - 1];
         
-        let (mut l, mut r, mut sum) = (0, 0, 0);
+        let (mut l, mut r) = (0, 0);
         
         for i in 0..(nums.len() - 2) {
             l = i + 1;
