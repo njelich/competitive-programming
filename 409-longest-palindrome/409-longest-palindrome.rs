@@ -11,7 +11,7 @@ impl Solution {
         // So we take longest odd string
         let mut odd = 0;
         let mut longest = 0;
-        for (k, v) in map.iter() {
+        for v in map.values() {
             if(v % 2 == 0) {
                 longest += v;
             } else {
