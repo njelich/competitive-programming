@@ -8,7 +8,6 @@ function findAnagrams(s: string, p: string): number[] {
         chars[p.charCodeAt(i) - 97] -= 1;
     }
     for (let i = windowSize; i < s.length; i++) {
-        console.log(chars);
         if (chars.every((val) => val == 0)) {
             ret.push(i - windowSize);
         }
